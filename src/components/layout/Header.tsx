@@ -164,20 +164,6 @@ const activeNavLinkStyles = css`
   background-color: rgba(67, 97, 238, 0.1);
 `;
 
-const menuButtonStyles = css`
-  margin-right: ${theme.spacing.sm};
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-  }
-`;
-
-const apiButtonStyles = css`
-  @media (max-width: 480px) {
-    display: none;
-  }
-`;
 
 const mobileMenuButtonStyles = css`
   display: none;
@@ -238,8 +224,6 @@ const activeDrawerLinkStyles = css`
   background: rgba(67, 97, 238, 0.1);
 `;
 
-const drawerApiButtonStyles = css`
-  margin-top: 12px;
-`;
+
 
 export default Header;

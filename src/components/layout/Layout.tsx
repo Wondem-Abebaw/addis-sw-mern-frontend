@@ -24,7 +24,7 @@ const Layout: React.FC = () => {
     <div css={layoutStyles}>
       <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <div css={contentStyles}>
-        <main css={mainStyles}>
+        <main css={mainStyles(isSidebarOpen)}>
           <Outlet />
         </main>
         {isSidebarOpen && (
@@ -47,7 +47,7 @@ const contentStyles = css`
   position: relative;
 `;
 
-const mainStyles = css`
+const mainStyles = (isSidebarOpen: boolean) => css`
   flex: 1;
   padding: ${theme.spacing.md};
   background-color: ${theme.colors.background};
@@ -55,8 +55,7 @@ const mainStyles = css`
 
   @media (max-width: 768px) {
     padding: ${theme.spacing.sm};
-    transform: ${(props: { isSidebarOpen?: boolean }) =>
-      props.isSidebarOpen ? "translateX(240px)" : "translateX(0)"};
+    transform: ${isSidebarOpen ? "translateX(240px)" : "translateX(0)"};
   }
 `;
 

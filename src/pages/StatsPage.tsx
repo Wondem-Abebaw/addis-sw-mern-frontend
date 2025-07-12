@@ -24,7 +24,7 @@ import {
 } from "../components/ui/StatCard";
 
 import theme from "../styles/theme";
-import Loader from "../components/ui/Loader";
+
 import StatsSkeleton from "../components/ui/StatsSkeleton";
 
 const StatsPage: React.FC = () => {
@@ -356,12 +356,6 @@ const chartContainerStyles = css`
   height: 300px;
 `;
 
-const refreshButtonContainer = css`
-  display: flex;
-  justify-content: center;
-  margin-top: 1.5rem;
-`;
-
 const errorStyles = css`
   color: #ef4444;
   padding: 1.5rem;
@@ -374,17 +368,6 @@ const emptyStateStyles = css`
   color: #64748b;
 `;
 
-const gridStyles = css`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: ${theme.spacing.lg};
-`;
-
-const columnStyles = css`
-  display: flex;
-  flex-direction: column;
-  gap: ${theme.spacing.lg};
-`;
 const emptyChartStyles = css`
   display: flex;
   justify-content: center;

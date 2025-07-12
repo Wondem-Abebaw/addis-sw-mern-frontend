@@ -1,4 +1,4 @@
-import { call, put, takeEvery, select } from "redux-saga/effects";
+import { call, put, takeEvery } from "redux-saga/effects";
 import {
   getSongs,
   createSong,
@@ -76,7 +76,7 @@ function* handleApplyFilter(action: any): Generator<any, void, any> {
     const filters = action.payload;
     const filteredSongs = yield call(filterSongs, filters);
     yield put(fetchSongsSuccess(filteredSongs.data));
-  } catch (error) {
+  } catch (error:any) {
     yield put(fetchSongsFailure(error.message));
   }
 }
