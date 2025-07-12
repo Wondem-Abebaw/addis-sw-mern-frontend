@@ -1,6 +1,6 @@
-import React from "react";
 import { css, keyframes } from "@emotion/react";
 import theme from "../../styles/theme";
+import * as React from "react";
 
 const spin = keyframes`
   0% { transform: rotate(0deg); }

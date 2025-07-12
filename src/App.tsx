@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 
 import { fetchSongs } from "./features/songs/songSlice";
-import { fetchStatistics } from "./features/stats/statsSlice";
+
 import { useAppDispatch } from "./store/store";
-import { Notification, useNotification } from "./hooks/useNotification";
+import { useNotification } from "./hooks/useNotification";
 import Layout from "./components/layout/Layout";
 
 import SongsPage from "./pages/SongsPage";
 import StatsPage from "./pages/StatsPage";
 import NotFound from "./pages/NotFound";
 import { Toaster } from "sonner";
+import { useEffect } from "react";
 
 function App() {
   const dispatch = useAppDispatch();

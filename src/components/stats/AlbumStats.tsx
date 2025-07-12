@@ -1,8 +1,7 @@
-import React from "react";
 import { css } from "@emotion/react";
-import theme from "../../styles/theme";
 import Card from "../ui/Card";
 import type { Statistics } from "../../types/statsTypes";
+import theme from "../../styles/theme";
 // import type { Statistics } from "../../types/statsTypes";
 
 interface AlbumStatsProps {

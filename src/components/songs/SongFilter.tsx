@@ -1,6 +1,4 @@
-import React from "react";
 import { css } from "@emotion/react";
-import theme from "../../styles/theme";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import Button from "../ui/Button";
 import {
@@ -8,7 +6,9 @@ import {
   clearFilter,
   applyFilter,
 } from "../../features/songs/songSlice";
-import { filterSongs } from "../../api/songAPI";
+import * as React from "react";
+
+import theme from "../../styles/theme";
 
 const SongFilter: React.FC = () => {
   const dispatch = useAppDispatch();

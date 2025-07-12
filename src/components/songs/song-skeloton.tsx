@@ -1,7 +1,9 @@
 /** SkeletonCard.tsx */
-import React from "react";
+
 import { css, keyframes } from "@emotion/react";
 import theme from "../../styles/theme";
+import * as React from "react";
+
 
 const shimmer = keyframes`
   0% {

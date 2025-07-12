@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import theme from "../../styles/theme";
-import React from "react";
+import * as React from "react";
 
 // Base Card component
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {

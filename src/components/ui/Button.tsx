@@ -1,7 +1,7 @@
-import React from "react";
+
 import { css } from "@emotion/react";
 import theme from "../../styles/theme";
-
+import * as React from "react";
 interface ButtonProps {
   children: React.ReactNode;
   variant?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";

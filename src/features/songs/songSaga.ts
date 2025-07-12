@@ -22,8 +22,8 @@ function* handleFetchSongs(): Generator<any, void, any> {
     const songs = yield call(getSongs);
     console.log("songsinitial", songs);
     yield put(fetchSongsSuccess(songs.data));
-  } catch (error) {
-    yield put(fetchSongsFailure(error.message));
+  } catch (error:any) {
+    yield put(fetchSongsFailure(error?.message));
   }
 }
 

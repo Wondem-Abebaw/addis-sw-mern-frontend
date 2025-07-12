@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { css } from "@emotion/react";
-import theme from "../../styles/theme";
 import { useAppDispatch, useAppSelector } from "../../store/store";
 import SongItem from "./SongItem";
 import Button from "../ui/Button";
 import Modal from "../ui/Modal";
 import SongForm from "./SongForm";
-import Loader from "../ui/Loader";
 import SongFilter from "./SongFilter";
 import {
   addSong,
@@ -16,6 +14,8 @@ import {
 import type { Song } from "../../types/songTypes";
 // import { createSong, deleteSong, updateSong } from "../../api/songAPI";
 import SongItemSkeleton from "./song-skeloton";
+import theme from "../../styles/theme";
+import * as React from "react";
 
 const SongList: React.FC = () => {
   const dispatch = useAppDispatch();

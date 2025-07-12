@@ -1,22 +1,18 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { css } from "@emotion/react";
 import { Link, useLocation } from "react-router-dom";
-import theme from "../../styles/theme";
-import Button from "../ui/Button";
-import { useNotification } from "../../hooks/useNotification";
 import { Notification } from "../../hooks/useNotification";
+import theme from "../../styles/theme";
+import * as React from "react";
 
 interface HeaderProps {
   toggleSidebar: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ toggleSidebar }) => {
+const Header: React.FC<HeaderProps> = ({  }) => {
   const location = useLocation();
-  const { showNotification } = useNotification();
   const [drawerOpen, setDrawerOpen] = useState(false);
-
   const isActive = (path: string) => location.pathname === path;
-
   return (
     <header css={headerStyles}>
       <div css={containerStyles}>

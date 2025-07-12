@@ -1,6 +1,8 @@
-import React, { ReactNode } from "react";
+
 import { css } from "@emotion/react";
+import type { ReactNode } from "react";
 import theme from "../../styles/theme";
+import * as React from "react";
 
 interface CardProps {
   children: ReactNode;

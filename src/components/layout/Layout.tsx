@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { css } from "@emotion/react";
 import Header from "./Header";
 import theme from "../../styles/theme";
+import * as React from "react";
 
 const Layout: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -10,7 +11,7 @@ const Layout: React.FC = () => {
   // Close sidebar when window is resized to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) { 
+      if (window.innerWidth > 768) {
         setIsSidebarOpen(false);
       }
     };
@@ -23,7 +24,6 @@ const Layout: React.FC = () => {
     <div css={layoutStyles}>
       <Header toggleSidebar={() => setIsSidebarOpen(!isSidebarOpen)} />
       <div css={contentStyles}>
-       
         <main css={mainStyles}>
           <Outlet />
         </main>

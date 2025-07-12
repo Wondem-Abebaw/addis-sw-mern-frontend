@@ -1,10 +1,10 @@
-import React from "react";
-import type { ReactNode } from "react";
 
+import type { ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { css } from "@emotion/react";
-import theme from "../../styles/theme";
 import Button from "./Button";
+import theme from "../../styles/theme";
+import * as React from "react";
 
 interface ModalProps {
   isOpen: boolean;
