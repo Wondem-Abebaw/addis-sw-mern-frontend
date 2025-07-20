@@ -18,7 +18,7 @@ const SongFilter: React.FC = () => {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    if (value !== "" || value !== undefined) {
+    if (value !== "" && value !== undefined) {
       dispatch(setFilter({ field: name, value }));
     }
   };
