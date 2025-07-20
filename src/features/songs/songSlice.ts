@@ -41,10 +41,22 @@ const songSlice = createSlice({
     deleteSongSuccess(state, action: PayloadAction<string>) {
       state.songs = state.songs.filter((song) => song._id !== action.payload);
     },
+    // setFilter(state, action: PayloadAction<{ field: string; value: string }>) {
+    //   const { field, value } = action.payload;
+    //   state.filter = { ...state.filter, [field]: value };
+    // },
     setFilter(state, action: PayloadAction<{ field: string; value: string }>) {
-      const { field, value } = action.payload;
-      state.filter = { ...state.filter, [field]: value };
-    },
+  const { field, value } = action.payload;
+  // If the value is empty or undefined, remove the filter for that field
+  if (value === "" || value === undefined) {
+    
+    delete state.filter[field as keyof typeof state.filter];
+  } else {
+    // Otherwise, set the filter value
+    // Use object spread to create a new object, which is generally preferred in Redux for immutability
+    state.filter = { ...state.filter, [field]: value };
+  }
+},
     clearFilter(state) {
       state.filter = {};
     },
